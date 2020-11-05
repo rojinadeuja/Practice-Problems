@@ -1,3 +1,5 @@
+import queue from Queue
+
 class Solution:
     def findNeighbors(self, coordinates, grid):
         '''Function to fetch the immediate neighbors of a point in the grid'''
@@ -24,5 +26,6 @@ class Solution:
         
         
     def numIslands(self, grid: List[List[str]]) -> int:
+        
         self.findNeighbors((0,0), grid)
         
