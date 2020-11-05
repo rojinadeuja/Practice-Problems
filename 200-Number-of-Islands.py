@@ -44,4 +44,6 @@ class Solution:
                     print("Found Island")
             
         return islands
-        
+
+ # Time complexity is O(i*j) where i = number of rows and j = number of columns
+ # Space complexity is O(i*j)       
