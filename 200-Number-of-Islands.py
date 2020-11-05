@@ -1,4 +1,4 @@
-import queue from Queue
+import queue
 
 class Solution:
     def findNeighbors(self, coordinates, grid):
@@ -26,6 +26,6 @@ class Solution:
         
         
     def numIslands(self, grid: List[List[str]]) -> int:
-        
+        que = queue.Queue()
         self.findNeighbors((0,0), grid)
         
