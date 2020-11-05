@@ -27,5 +27,21 @@ class Solution:
         
     def numIslands(self, grid: List[List[str]]) -> int:
         que = queue.Queue()
-        self.findNeighbors((0,0), grid)
+        islands = 0
+        
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] != "0" :
+                    que.put((i,j))
+                    while not que.empty():
+                        coord = que.get()
+                        children = self.findNeighbors(coord, grid)
+                        for child in children:
+                            que.put(child)
+                            grid[child[0]][child[1]] = "0"
+                        grid[coord[0]][coord[1]] = "0"
+                    islands+=1
+                    print("Found Island")
+            
+        return islands
         
