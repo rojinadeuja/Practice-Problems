@@ -1,3 +1,10 @@
+'''
+Leetcode Q200 - https://leetcode.com/problems/number-of-islands/
+Given an m x n 2d grid map of '1's (land) and '0's (water), return the number of islands.
+
+An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. 
+You may assume all four edges of the grid are all surrounded by water.
+'''
 import queue
 
 class Solution:
@@ -41,7 +48,6 @@ class Solution:
                             grid[child[0]][child[1]] = "0"
                         grid[coord[0]][coord[1]] = "0"
                     islands+=1
-                    print("Found Island")
             
         return islands
 
