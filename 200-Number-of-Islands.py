@@ -13,10 +13,10 @@ class Solution:
         if i!=0 and grid[i-1][j]=="1":
             neighbors.append((i-1, j))
         # Check downward
-        if i<m and grid[i+1][j]=="1":
+        if i<m-1 and grid[i+1][j]=="1":
             neighbors.append((i+1, j))
         # Check right
-        if j<m and grid[i][j+1]=="1":
+        if j<n-1 and grid[i][j+1]=="1":
             neighbors.append((i, j+1))
         # Check left
         if j!=0 and grid[i][j-1]=="1":
