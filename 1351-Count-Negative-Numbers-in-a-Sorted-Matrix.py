@@ -27,3 +27,7 @@ class Solution:
             firstNegIndex = self.findFirstNegIndex(row)
             negativeNumbers += (len(row)-firstNegIndex) if firstNegIndex != None else 0
         return negativeNumbers
+
+
+# Time complexity by using Binary Search will be O(nlogm). Space complexity is O(1). 
+# Here n =number of rows; m = number of elements in each row
