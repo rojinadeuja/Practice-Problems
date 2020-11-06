@@ -16,10 +16,10 @@ class Node:
 class Solution:               
     def preorder(self, root: 'Node') -> List[int]:
         result = []
-        
+        # If tree is empty return empty list
         if not root:
             return result
-        
+        # Define Depth First Search
         def dfs(root):
             result.append(root.val)
             
@@ -29,5 +29,6 @@ class Solution:
             if root.children:
                 for child in root.children:
                     dfs(child)
+        # Carry out DFS
         dfs(root)
         return result
