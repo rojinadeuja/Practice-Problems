@@ -24,3 +24,5 @@ class Solution:
             else:
                 root = root.left
         return None
+
+# Time complexity for Binary Saeach is O(log n). Space complexity O(1).
