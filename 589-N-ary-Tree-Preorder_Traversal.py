@@ -1,3 +1,10 @@
+'''
+Leetcode Q589-https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+
+Given an n-ary tree, return the preorder traversal of its nodes' values.
+'''
+
+
 """
 # Definition for a Node.
 class Node:
