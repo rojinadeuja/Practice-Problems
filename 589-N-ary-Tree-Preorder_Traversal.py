@@ -32,3 +32,5 @@ class Solution:
         # Carry out DFS
         dfs(root)
         return result
+
+# Time complexity for DFS is O(V+E). Space complexity is constant, O(V).
