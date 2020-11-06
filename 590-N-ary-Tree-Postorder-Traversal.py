@@ -17,7 +17,7 @@ class Solution:
         self.result = []
         
     def postorder(self, root: 'Node') -> List[int]:
-        
+
         # If tree is empty, return empty list
         if not root:
             return self.result
@@ -31,3 +31,5 @@ class Solution:
         return self.result
 
 s= Solution()
+
+# Time complexity is O(V+E). Space complexity is O(V).
