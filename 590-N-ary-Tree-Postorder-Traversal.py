@@ -1,3 +1,8 @@
+'''
+Leetcode Q590- https://leetcode.com/problems/n-ary-tree-postorder-traversal/
+
+Given an n-ary tree, return the postorder traversal of its nodes' values.
+'''
 """
 # Definition for a Node.
 class Node:
