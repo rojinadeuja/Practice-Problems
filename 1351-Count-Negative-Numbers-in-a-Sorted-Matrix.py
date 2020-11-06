@@ -7,6 +7,7 @@ Return the number of negative numbers in grid.
 
 class Solution:
     def findFirstNegIndex(self, arr):
+        '''Function that returns the index of first negative number using Binary Search'''
         start = 0
         end = len(arr)-1
 
@@ -20,6 +21,7 @@ class Solution:
                 end = med - 1
       
     def countNegatives(self, grid: List[List[int]]) -> int:
+        '''Function to count negative numbers in array'''
         negativeNumbers = 0
         for row in grid:
             firstNegIndex = self.findFirstNegIndex(row)
