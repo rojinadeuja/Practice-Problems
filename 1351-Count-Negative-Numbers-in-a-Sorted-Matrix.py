@@ -12,13 +12,13 @@ class Solution:
         end = len(arr)-1
 
         while start<=end:
-            med = (start+end)//2
-            if arr[med]<0 and ((med>0 and arr[med-1]>=0) or med == 0):
-                return med
-            if arr[med] >= 0:
-                start = med + 1   
+            median = (start+end)//2
+            if arr[median]<0 and ((median>0 and arr[median-1]>=0) or median == 0):
+                return median
+            if arr[median] >= 0:
+                start = median + 1   
             else:
-                end = med - 1
+                end = median - 1
       
     def countNegatives(self, grid: List[List[int]]) -> int:
         '''Function to count negative numbers in array'''
