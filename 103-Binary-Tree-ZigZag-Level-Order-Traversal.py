@@ -1,3 +1,11 @@
+'''
+Leetcode Q103 - https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+
+Given a binary tree, return the zigzag level order traversal of its nodes' values. 
+(ie, from left to right, then right to left for the next level and alternate between).
+
+'''
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -48,3 +56,4 @@ class Solution:
                 switch = not switch
 
         return resultList
+
