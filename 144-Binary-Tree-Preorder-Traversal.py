@@ -18,3 +18,5 @@ class Solution:
             return []
         # Traverse in Preorder (Root, Left, Right)
         return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
+
+# Time complexity is O(n). Space complexity is O(n).
