@@ -7,6 +7,8 @@
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
+        # Check if more nodes to be processed
         if not root:
             return []
+        # Traverse in Inorder (Left, Root, Right)
         return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
