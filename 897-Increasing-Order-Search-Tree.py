@@ -1,3 +1,11 @@
+'''
+Leetcode Q897- https://leetcode.com/problems/increasing-order-search-tree/
+
+Given a binary search tree, rearrange the tree in in-order 
+so that the leftmost node in the tree is now the root of the tree, 
+and every node has no left child and only 1 right child.
+'''
+
 # Definition for binary tree node
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
