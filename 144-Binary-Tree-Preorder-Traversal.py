@@ -13,7 +13,7 @@ Given the root of a binary tree, return the preorder traversal of its nodes' val
 
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
-        # Check if more nodesto be processed
+        # Check if no nodes to be processed
         if not root:
             return []
         # Traverse in Preorder (Root, Left, Right)
