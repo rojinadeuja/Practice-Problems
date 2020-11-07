@@ -11,23 +11,36 @@ class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         innerList = []
         resultList = []
+
+        # Count number of nodes in each level, initialize 1 for root
         count = 1
+
+        # Intialize queue
         que = Queue()
-        
+
+        # If tree is empty return empty list
         if not root:
             return []
+
+        # Put root into queue
         que.put(root)
         
         while not que.empty():
+            # Pop a node and decrement count
             root = que.get()
-            count -=1
+            count -= 1
+            # Add its children to queue
             if root.left:
                 que.put(root.left)
             if root.right:
                 que.put(root.right)
+            # Add node to innerList
             innerList.append(root.val)
+
+            # If no more nodes in level, add level to resultList
             if count == 0:
                 resultList.append(innerList)
                 innerList = []
                 count = que.qsize()
+                
         return resultList
