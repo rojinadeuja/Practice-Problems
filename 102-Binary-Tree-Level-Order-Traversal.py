@@ -19,13 +19,13 @@ class Solution:
         que.put(root)
         
         while not que.empty():
-            e = que.get()
+            root = que.get()
             count -=1
-            if e.left:
-                que.put(e.left)
-            if e.right:
-                que.put(e.right)
-            innerList.append(e.val)
+            if root.left:
+                que.put(root.left)
+            if root.right:
+                que.put(root.right)
+            innerList.append(root.val)
             if count == 0:
                 resultList.append(innerList)
                 innerList = []
