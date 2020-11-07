@@ -17,4 +17,18 @@ class Solution:
                 return []
             # Traverse nodes In-order
             return traverseNodes(root.left) + [root.val] + traverseNodes(root.right)
-            
+        
+        # Traverse through tree in increasing order
+        result = traverseNodes(root)
+
+        # Initialize resultNode
+        resultNode = currentNode = TreeNode()
+
+        # Store nodes from list to TreeNode
+        while result:
+            currentNode.right = TreeNode(result.pop(0))
+            currentNode = currentNode.right
+        
+        # First node has value 0 so return all nodes on its right
+        return resultNode.right
+
