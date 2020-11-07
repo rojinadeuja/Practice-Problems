@@ -40,3 +40,4 @@ class Solution:
         # First node has value 0 so return all nodes on its right
         return resultNode.right
 
+# Time complexity is O(n). Space compexity is O(n).
