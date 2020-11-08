@@ -10,9 +10,11 @@ class Solution:
     def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
         resultList = []
         innerList = []
-        
+
+        # If tree is empty return empty list
         if not root:
             return resultList
+
         count = 1
         que = Queue()
         que.put(root)
@@ -28,6 +30,7 @@ class Solution:
             
             innerList.append(node.val)
             
+            # Check if level complete
             if count == 0:
                 resultList.insert(0, innerList)
                 innerList = []
