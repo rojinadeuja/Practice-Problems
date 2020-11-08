@@ -10,9 +10,12 @@ class Solution:
         if not nums:
             return
         
+        # Computer median
         med = len(nums)//2
         
+        # Add median of nums as root node
         root = TreeNode(nums[med])
+        # Recursively add medians along subarrays to left and right
         root.left = self.sortedArrayToBST(nums[:med])
         root.right = self.sortedArrayToBST(nums[med+1:])
         
