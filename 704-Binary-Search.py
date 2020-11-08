@@ -21,3 +21,5 @@ class Solution:
                 end = median - 1
         # If not found, return -1
         return -1
+
+# Time Complexity using Binary Search is O(log n). Space complexity is constant O(1).
