@@ -36,3 +36,5 @@ class Solution:
             root.left = self.trimBST(root.left, low, high)
             root.right = self.trimBST(root.right, low, high)
             return root
+
+# Time complexity is O(n) since we visit each node at most once. Space complexity is O(n)
