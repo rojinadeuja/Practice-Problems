@@ -4,3 +4,16 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+class Solution:
+    def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
+        if not nums:
+            return
+        
+        med = len(nums)//2
+        
+        root = TreeNode(nums[med])
+        root.left = self.sortedArrayToBST(nums[:med])
+        root.right = self.sortedArrayToBST(nums[med+1:])
+        
+        return root
