@@ -14,30 +14,32 @@ class Solution:
         self.mode = []
         
         def findCount(root):
-           
+            # If root is None return
             if not root:
                 return
             
+            # If value not in dict, put into dict. Else, increase count
             if root.val not in self.dct:
                 self.dct[root.val] = 1
             else:
                 self.dct[root.val] += 1
             
+            # If left exists, go left
             if root.left:
                 findCount(root.left)
-                
+            
+            # If right exists, go right
             if root.right:
                 findCount(root.right)
-                
+
+            # Find max count  
             if self.dct[root.val] >= self.maxCount:
                 self.maxCount = self.dct[root.val]
-                
-            if not root.right and not root.left:
-                self.count = 1
-            
-        
+
+        # Run findCount() function
         findCount(root)
         
+        # Get all nodes with max fount from dictionary
         for key, val in self.dct.items():
             if val == self.maxCount:
                 self.mode.append(key)
