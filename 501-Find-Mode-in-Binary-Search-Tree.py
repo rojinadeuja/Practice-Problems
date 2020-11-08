@@ -56,3 +56,5 @@ class Solution:
                 self.mode.append(key)
                 
         return self.mode
+
+# Time complexity is O(n). Space complexity is O(n).
