@@ -13,25 +13,28 @@ class Solution:
         resultList = []
         innerList = []
         
+        # If tree is empty return empty list
         if not root:
             return resultList
-        
+
+        # Initialize queue
         que = Queue()
         que.put(root)
-        
+    
         count = 1
-        
+    
         while not que.empty():
             node = que.get()
             count -= 1
-            
+            # If node has children, put into queue
             if node.children:
                 children = node.children
                 for child in children:
                     que.put(child)
                 
             innerList.append(node.val)
-            
+
+            # Check if level complete
             if count == 0:
                 resultList.append(innerList)
                 innerList = []
