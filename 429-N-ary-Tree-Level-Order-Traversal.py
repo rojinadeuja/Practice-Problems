@@ -1,3 +1,9 @@
+'''
+Leetcode Q429- https://leetcode.com/problems/n-ary-tree-level-order-traversal/
+
+Given an n-ary tree, return the level order traversal of its nodes' values.
+'''
+
 """
 # Definition for a Node.
 class Node:
@@ -12,7 +18,7 @@ class Solution:
     def levelOrder(self, root: 'Node') -> List[List[int]]:
         resultList = []
         innerList = []
-        
+
         # If tree is empty return empty list
         if not root:
             return resultList
