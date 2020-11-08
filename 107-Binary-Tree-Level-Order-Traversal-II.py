@@ -43,3 +43,5 @@ class Solution:
                 innerList = []
                 count = que.qsize()
         return resultList
+
+# Time Complexity is O(n). Space complexity is O(n).
