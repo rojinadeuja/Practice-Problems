@@ -28,3 +28,5 @@ class Solution:
         root.right = self.sortedArrayToBST(nums[med+1:])
         
         return root
+
+# Time complexity is O(n). Space complexity is O(n).
