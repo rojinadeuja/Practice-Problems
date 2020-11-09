@@ -10,7 +10,7 @@ class Solution:
     def reverseString(self, s: List[str]) -> None:
         start = 0
         end = len(s)-1
-        
+        # Swap elements alongside two ends of array
         while start <= end:
             s[start], s[end] = s[end], s[start]
             start+=1
