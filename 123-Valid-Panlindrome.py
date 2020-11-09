@@ -28,5 +28,7 @@ class Solution:
 # Approach 2
 # class Solution:
 #     def isPalindrome(self, s: str) -> bool:
+#         # Remove alphanumeric and convert to lowercase
 #         s = (re.sub(r'[\W_]+', '', s)).lower()
+#         # Simply compare string to reversed string
 #         return True if(s[::-1]==s[::]) else False
