@@ -5,9 +5,9 @@ Return the index of the first occurrence of needle in haystack, or -1 if needle 
 '''
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        if needle == '':
+        if not needle:
             return 0
-        if haystack == '':
+        if not haystack:
             return -1
         n = len(needle)
         for i in range(len(haystack)-(n-1)):
