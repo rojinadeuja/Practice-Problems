@@ -34,3 +34,5 @@ class Solution:
                 del indexDct[ch]
         # Dict now has index of all single letters, take min of values to get first index
         return min(indexDct.values()) if indexDct else -1   
+
+# Time complexity is O(n). Space complexity is O(n).
