@@ -10,8 +10,10 @@ Note: For the purpose of this problem, we define empty string as valid palindrom
 import re
 class Solution:
     def isPalindrome(self, s:str) -> bool:
+        # If str is empty, return True
         if not str:
             return True
+        # Remove alphanumeric and convert to lowercase
         s = re.sub(r'[\W_]+','',s).lower()
         start = 0
         end = len(s)-1
