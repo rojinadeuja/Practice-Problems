@@ -24,3 +24,9 @@ class Solution:
                 start +=1
                 end -=1
         return True
+
+# Approach 2
+# class Solution:
+#     def isPalindrome(self, s: str) -> bool:
+#         s = (re.sub(r'[\W_]+', '', s)).lower()
+#         return True if(s[::-1]==s[::]) else False
