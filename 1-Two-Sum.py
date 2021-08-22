@@ -6,6 +6,18 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 ''' 
+
+# Further Optimized- Optimized Dictionary, Fewer LOC
+class Solution(object):
+    def twoSum(self, nums, target):
+        numsDict = {}
+        for i, num in enumerate(nums):
+            diff = target-num
+            if diff in numsDict:
+                return [i, numsDict[diff]]
+            numsDict[num]= i   
+# RC: O(n); SC: O(n)
+
 # Further Optimized - Using a dictionary
 class Solution(object):
     def twoSum(self, nums, target):
